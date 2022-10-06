@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap import -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+    <title>HW 1</title>
+</head>
+<body>
+    
+    <h1>
+        HW 1: Personas & Storyboarding
+    </h1>
+    
+    
+    <h2>
+        Intro to the Brown Printers
+    </h2>
+
+    <!-- Bootstrap row and column example sourced from https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+    <div class="row">
+        <div class="col-md-5">
+            <div id="interface-images">
+                <img src="assets/entire-printer.png" />
+                <figcaption><b>Fig 1. The general printer interface.</b></figcaption>
+                <br>
+                <img src="assets/log-in.png" />
+                <figcaption><b>Fig 2. Log-in screen before swiping.</b></figcaption>
+                <br>
+                <img src="assets/print-screen.png" />
+                <figcaption><b>Fig 3. Document queue screen after swiping.</b></figcaption>
+            </div>
+            
+        </div>
+        <div class="col-md-7">
+            <h4> Interface Description</h4>
+            <p>
+                <br>
+                This interface is trying to solve the problem of providing accessible, easy-to-use printers to Brown students while also tracking their paper usage and charging them accordingly, ostensibly to incentivize using less paper.
+                <br>
+                <br>
+                <b>Key Components:</b>
+                <ul>
+                    <li><i>Screen:</i> Can either be a log-in screen, indicating that the user should swipe at the card reader, or, once they've logged in, a queue indicating the documents to be printed, with options for <b>Print/Print All</b>, <b>Cancel/Cancel All</b>, <b>Log Out</b>, <b>Refresh</b>.</li>
+                    <li><i>Card Swipe:</i> The mechanism that users swipe their Brown ID through to log-in.</li>
+                    <li><i>Mouse:</i> The hand-held device that allows users to navigate the screen.</li>
+                    <li><i>Printer Tray:</i> The top opening of the printer where the printed documents come out.</li>
+                    <li><i>Keyboard:</i> Attached to the computer but not used.</li>
+                </ul>
+                
+            </p>
+            <h4>Observation</h4>
+            <p>
+                <ul>
+                    <li>
+                        Users generally swipe their cards within 10 seconds of approaching the printer; many (~70%) had to do this a few times, either changing speed or reorienting their card each time. This step induced the most signs of frustration in users.
+                    </li>
+                    <li>
+                        Most users were printing just one document, so they used the blue "Print" button in the grid. Some were printing multiple documents, but still just clicked "Print" individually on all of them. Only one of 10 users clicked the green "Print All" at the buttom.
+                    </li>
+                    <li>
+                        The printer most frequently saw traffic right before classes; users came in, used the printer, and left right after. During these times, lines often formed. A few of these times, users left before their entire queue had printed, often when the printer stopped making noise.
+                    </li>
+                </ul> 
+                <br>
+                <h4>Interviews</h4>
+                Below is a list of the interview questions that users were asked right after they printed something and a summary of the information this process yielded. 
+            </p>
+            <ol>
+                <li>
+                    What is your first instinct upon walking up to the printer?
+                </li>
+                <li>
+                    What is your first instinct upon seeing the screen after log-in (document queue)?
+                </li>
+                <li>
+                    What was the most frustrating part of the experience?
+                </li>
+                <li>
+                    What time of day do you usually use the printer? 
+                </li>
+                <li>
+                    How often do you use the printer?
+                </li>
+                <li>
+                    How often do you encounter problems and what kind? [<i>Never</i>, <i>Rarely</i>, <i>Sometimes</i>, <i>Often</i>, <i>Always</i>]
+                </li>
+                <li>
+                    Is this easier or harder to use than other printers? Why?
+                </li>
+                <li>
+                    Do you have anything else to add?
+                </li>
+            </ol>
+            <ul>
+                <li>Most people are infrequent (<i>rarely</i>) users of the printer but still find it generally easy to use. Many said it's easier to use than other printers since there's no setup required.</li>
+                <li>In terms of problems, all reported few or none. All found the card swipe to be the most frustrating but not hard to use.</li>
+                <li>Users felt the simple interface (not a lot of "parts", bare log-in screen, very few buttons) made it easy to use based on instinct, but gave too little information. Total price, total number of pages, printing progress, cancellation progress, and the content of the uploaded documents were all noted as things users wished they could see.</li>
+                <li>First time users noted the button layout of the document queue screen was strange; a few noted that the "Log Out" was in an odd spot, and their instinct would usually expect it where "Cancel All" is. The "Print All" and "Cancel All" buttons being so similar and both "green", a color they indicated with "positive" actions, made users feel they had to re-read and be extra careful in choosing buttons.</li>
+                <li>Most users indicated that they usually use the printer right before the class that they need their document for, in case they want to make last minute edits.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2>
+        Personas
+    </h2>
+    
+    <div class="persona">
+        <img src="assets/busy-benjamin.png" />
+        
+        <div class="persona-description">
+            <p>
+                <b>Background</b>
+                <br>
+                Busy Benjamin is a senior who is taking his final requirements for his concentration. He is printing multiple homework assignments, but has class in 5 minutes.
+                <br>
+                <br>
+                <b>Interface Problems</b>
+            </p>
+            <ul>
+                <li>
+                    The card swipe only accepts a certain "speed" of swipe but only gives a generic error message, not one that specifies the problem.
+                </li>
+                <li>
+                    There is no total cost indicated anywhere, only individual costs.
+                </li>
+                <li>
+                    There is no "progress bar" or indication where the printer is in the queue.
+                </li>
+                <li>
+                    The printer "whir" / sound that indicates it is printing is not consistent. Often it is constant throughout multiple documents and then sometimes pauses for a while, then keeps printing.
+                </li>
+            </ul>
+            <p>
+                <b>Representation</b>
+                <br>
+                Many students are semi-familiar with the printing process and are aware that it is a relatively short process, so they feel comfortable leaving it until they are pressed for time. They also might want to make edits to a document right until up until that document is due. Benjamin represents these students and their frustrations with the printer when they are already stressed. They may not be paying close attention to the printer or attempting to hurry the process. In addition, the lack of "total cost" is a general problem with the interface.
+            </p>
+        </div>
+    </div>
+    
+    <div class="persona">
+        <img src="assets/first-time-farah.png" />
+        
+        <div class="persona-description">
+            <p>
+                <b>Background</b>
+                <br>
+                First timer Farah is a freshman using the printer for the first time and has to print 5 copies of the same paper for peer review.
+                <br>
+                <br>
+                <b>Interface Problems</b>
+            </p>
+            <ul>
+                <li>
+                    The card swipe has vague arrows and a hard-to-see symbol indicating swipe direction, so it's difficult for her to determine how to swipe.
+                </li>
+                <li>
+                    Both the "Print" and "Cancel" buttons are in the exact same style.
+                </li>
+                <li>
+                    The "Log Out" button is in the top left - she usually associates it with the bottom right, where the "Cancel All" button is. 
+                </li>
+                <li>
+                    She has to manually total up the copies since the interface does not indicate total number of pages queued.
+                </li>
+                <li>
+                    There is no way to check the content of what has been uploaded. 
+                </li>
+                <li>
+                    Documents take a long time to cancel.
+                </li>
+            </ul>
+            <p>
+                <b>Representation</b>
+                <br>
+                Most students don't use the printers all that often, so they don't already have muscle memory or innate knowledge of the interface. Farah represents this aspect of users, who find the card swipe tricky or are used to other interface button styles ("positive" vs. "negative" buttons being more different, "exit" in bottom right). Other pitfalls, like the need to manually total copies, inability to check uploaded content, and length of cancellation time are general problems for any user.
+            </p>
+        </div>
+        
+    </div>
+    
+    <h2>
+        Storyboard
+    </h2>
+    
+    <div id="storyboard">
+        <img src="assets/storyboard.png" />
+    </div>
+    
+    
+    
+</body>
+</html>
